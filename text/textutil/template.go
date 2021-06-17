@@ -20,6 +20,7 @@ func render(t *template.Template, vars interface{}) string {
 	return tmplBytes.String()
 }
 
+// RenderString should be commented
 func RenderString(str string, vars interface{}) string {
 	tmpl, err := template.New("tmpl").Funcs(FuncMap()).Parse(str)
 
@@ -30,6 +31,7 @@ func RenderString(str string, vars interface{}) string {
 	return render(tmpl, vars)
 }
 
+// FuncMap should be commented
 func FuncMap() template.FuncMap {
 	return template.FuncMap{
 		"pathescape": url.PathEscape,

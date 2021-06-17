@@ -139,7 +139,7 @@ func Parse(rawurl string) (*USL, error) {
 	return us, nil
 }
 
-// Parse should be commented
+// ParseMayLocalPath should be commented
 func ParseMayLocalPath(rawurl string) (*USL, error) {
 	in, err := reduceLocal(rawurl)
 	if err != nil {
@@ -190,6 +190,7 @@ func (us *USL) MapCustom(templateMap map[string]string) (map[string]string, []st
 	return m, ks
 }
 
+// IsLocal should be commented
 func IsLocal(in string) bool {
 	for _, p := range []string{"/", "./", "../"} {
 		if strings.HasPrefix(in, p) {
