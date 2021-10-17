@@ -3,7 +3,7 @@ package osutil
 import (
 	"os"
 
-	"golang.org/x/crypto/ssh/terminal"
+	terminal "golang.org/x/term"
 )
 
 // IsTerminal should be commented
